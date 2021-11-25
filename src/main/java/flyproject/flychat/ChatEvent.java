@@ -98,7 +98,7 @@ public class ChatEvent implements Listener {
     }
     private String Message(String msg, Player player){
         String bycheck = checkColor(player,msg,false);
-        return bycheck;
+        return ChatColor.translateAlternateColorCodes('&',bycheck);
     }
     public static String checkColor(Player paramPlayer, String paramString, boolean paramBoolean) {
         paramString = paramString.replaceAll("[§]", "&");
