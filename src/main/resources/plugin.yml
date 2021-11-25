@@ -1,0 +1,27 @@
+name: FlyChat
+version: '${version}'
+main: flyproject.flychat.FlyChat
+prefix: FlyChat
+load: STARTUP
+authors: [ FlyProject ]
+description: A Simple Chat Plugin
+depend:
+  - PlaceholderAPI
+commands:
+  flychat:
+    aliases:
+      - flc
+    permission: flychat.command
+permissions:
+  flychat.*:
+    default: op
+    children:
+      - flychat.command
+      - flychat.color
+      - flychat.formatting
+  flychat.formatting:
+    default: op
+  flychat.color:
+    default: op
+  flychat.command:
+    default: op

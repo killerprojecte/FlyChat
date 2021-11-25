@@ -1,0 +1,38 @@
+format:
+  #前缀
+  prefix:
+    #前缀文字
+    text: "&7[&b前缀&7]"
+    #前缀悬浮文字
+    hovertext:
+      - "&8点击私聊此玩家"
+    #cmd = 点击执行命令
+    #suggest_cmd = 候选命令
+    #url = 打开网页
+    action: "suggest_cmd"
+    #执行命令(点击执行)
+    command: "/msg %player_name% "
+  player:
+    #玩家名称文字
+    text: "&7<&b%player_name%&7> "
+    #玩家名称悬浮文字
+    hovertext:
+      - "&8点击私聊此玩家"
+    #cmd = 点击执行命令
+    #suggest_cmd = 候选命令
+    #url = 打开网页
+    action: "suggest_cmd"
+    #执行命令(点击执行)
+    command: "/msg %player_name% "
+  suffix:
+    #后缀文字
+    text: "&7[&b后缀&7]"
+    #后缀悬浮文字
+    hovertext:
+      - "&8点击私聊此玩家"
+    #cmd = 点击执行命令
+    #suggest_cmd = 候选命令
+    #url = 打开网页
+    action: "suggest_cmd"
+    #执行命令(点击执行)
+    command: "/msg %player_name% "
