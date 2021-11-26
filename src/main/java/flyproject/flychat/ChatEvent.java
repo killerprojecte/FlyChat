@@ -19,6 +19,7 @@ import java.io.File;
 public class ChatEvent implements Listener {
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event){
+        event.setCancelled(true);
         String msg = event.getMessage();
         TextComponent tc = new TextComponent();
         TextComponent prefix = Prefix(event.getPlayer());
