@@ -27,7 +27,12 @@ public class ChatEvent implements Listener {
         tc.addExtra(playername);
         tc.addExtra(Message(msg,event.getPlayer()));
         tc.addExtra(suffix(event.getPlayer()));
-        event.setMessage(tc.toLegacyText());
+        for (Player player : Bukkit.getOnlinePlayers()){
+            if (tc.toLegacyText().contains(".help")){
+                return;
+            }
+            player.spigot().sendMessage(tc);
+        }
     }
     private TextComponent Prefix(Player player){
         File config = new File(flyproject.flychat.FlyChat.getPlugin(flyproject.flychat.FlyChat.class).getDataFolder(),"config.yml");
