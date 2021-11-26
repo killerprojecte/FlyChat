@@ -20,7 +20,6 @@ public class ChatEvent implements Listener {
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event){
         String msg = event.getMessage();
-        event.setCancelled(true);
         TextComponent tc = new TextComponent();
         TextComponent prefix = Prefix(event.getPlayer());
         TextComponent playername = PlayerName(event.getPlayer());
@@ -28,9 +27,7 @@ public class ChatEvent implements Listener {
         tc.addExtra(playername);
         tc.addExtra(Message(msg,event.getPlayer()));
         tc.addExtra(suffix(event.getPlayer()));
-        for (Player player : Bukkit.getOnlinePlayers()){
-            player.spigot().sendMessage((BaseComponent) tc);
-        }
+        event.setMessage(tc.toLegacyText());
     }
     private TextComponent Prefix(Player player){
         File config = new File(flyproject.flychat.FlyChat.getPlugin(flyproject.flychat.FlyChat.class).getDataFolder(),"config.yml");
